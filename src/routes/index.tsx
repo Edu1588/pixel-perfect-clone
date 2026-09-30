@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { RecomendadorCacamba } from "@/components/RecomendadorCacamba";
 import heroGalpao from "@/assets/hero-galpao.jpg";
 import {
   Accordion,
@@ -43,6 +44,7 @@ const menu = [
   { label: "Quem somos", href: "#quem-somos" },
   { label: "O que compramos", href: "#o-que-compramos" },
   { label: "Como funciona", href: "#como-funciona" },
+  { label: "Recomendação", href: "#recomendador" },
   { label: "Dúvidas", href: "#faq" },
   { label: "Contato", href: "#contato" },
 ];
@@ -322,6 +324,16 @@ function Index() {
           <BotaoPrimario href="#contato">Enviar meu material para avaliação</BotaoPrimario>
         </div>
       </section>
+
+      {/* Recomendador */}
+      <section id="recomendador" className="section-x pb-20">
+        <p className="eyebrow text-primary">Recomendação inteligente</p>
+        <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Qual serviço e caçamba você precisa?</h2>
+        <div className="mt-10">
+          <RecomendadorCacamba whatsappBase="https://wa.me/551156220348" />
+        </div>
+      </section>
+
 
       {/* Institucional */}
       <section id="quem-somos" className="bg-deep py-20 text-deep-foreground">
